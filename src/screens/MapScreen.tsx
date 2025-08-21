@@ -1,21 +1,19 @@
-import { View, StyleSheet, Text } from "react-native"
+import { View, StyleSheet, Text } from "react-native";
 
 const MapScreen = () => {
-    return(
-        <View
-            style={styles.container}
-        >
-            <Text>MapScreen</Text>
-        </View>
-    )
-}
+  return (
+    <View style={styles.container}>
+      <Text>MapScreen</Text>
+    </View>
+  );
+};
 
-export default MapScreen
+export default MapScreen;
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-    },
-})
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
