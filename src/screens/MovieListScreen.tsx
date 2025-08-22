@@ -11,6 +11,7 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 import movies from "../data/movies.json";
 import MovieRow from "../components/MovieRow";
+
 const MovieListScreen = () => {
   const navigation = useNavigation();
 
@@ -46,7 +47,7 @@ const MovieListScreen = () => {
                 navigation.navigate("MovieDetailsScreen", { movie: item })
               }
             >
-              <MovieRow movie={{ ...item, rating: item.rating.toString() }} />
+              <MovieRow movie={item} />
             </TouchableOpacity>
           )}
           ItemSeparatorComponent={() => <View style={styles.separator} />}

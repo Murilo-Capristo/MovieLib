@@ -1,19 +1,20 @@
 import { StyleSheet, Text, Image, View } from "react-native";
 
 export type Movie = {
-  id: number;
-  title: string;
-  categories: string;
-  duration: string;
-  rating: string;
-  synopsis: string;
-  poster: string;
+  id: number | null;
+
+  title: string | "";
+  categories: string | "";
+  duration: string | "";
+  rating: number | null;
+  synopsis: string | "";
+  poster: string | "";
 };
 
 export default function MovieRow({ movie }: { movie: Movie }) {
   return (
     <View style={styles.container}>
-      <Image source={require("../../assets/matrix.png")} style={styles.image} />
+      <Image source={{ uri: movie.poster }} style={styles.image} />
       <Text style={styles.title}>{movie.title}</Text>
       <Text style={styles.rating}>{`${movie.rating}/10`}</Text>
     </View>
